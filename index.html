@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pro Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LEFT -->
+<div class="left" id="appPanel">
+  <div class="plus" onclick="addApp()">+</div>
+</div>
+
+<!-- CENTER -->
+<div class="center">
+  <h2>TASK DASHBOARD</h2>
+  <div>
+    <input id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()">Add</button>
+  </div>
+</div>
+
+<!-- RIGHT -->
+<div class="right" id="board" style="color: white;">
+  No Task Yet
+</div>
+<!-- APP ADD MODAL -->
+<div id="appModal" class="modal">
+  <div class="modalBox">
+    <h3>Add App</h3>
+
+    <input id="appName" placeholder="App Name">
+    <input id="appUrl" placeholder="App URL (https://...)">
+
+    <button onclick="saveApp()">Add</button>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+<div class="topReset" onclick="resetTasks()">
+  <div class="resetCircle">🔄</div>
+  <span>Restart</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
